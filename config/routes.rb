@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   authenticated :user do
     resources :users
     resources :projects
+    resources :orders
     get "users/info"
     root "projects#index"
+    
   end
   get 'homes/login'
   root "homes#home"

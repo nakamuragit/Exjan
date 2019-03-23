@@ -7,12 +7,6 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
   end
 
-  def create 
-    @project = Project.new(project_params)
-    @project.save
-    redirect_to @project
-  end
-
   private 
   
   def project_params
