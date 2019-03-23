@@ -6,3 +6,7 @@
 <p><%= @project.cutback %></p>
 <p><%= @project.site %></p>
 <p><%= @project.description%></p>
+<%= form_with model: Project, url: @project do |form| %>
+  <%= form.hidden_field :project, :value => 1 %>
+  <%= form.submit "受注希望を出す", class: "btn border btn-danger" %>
+<% end %>

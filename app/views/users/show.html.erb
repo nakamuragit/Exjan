@@ -3,4 +3,9 @@
 <p>メールアドレス : <%= @user.email %></p>
 <p>チャンネル名 : <%= @user.channel_name%></p>
 <p>活動サイト : <%= @user.active_site%></p>
-<p></p>
+<% if @user.active_site == "youtube" %>
+  <p>チャンネル登録者数 : <%= @channel_member %></p>
+<% else @user.active_site == "Twitch" %>
+  <p>フォロワー数 : <%= @channel_member %></p>
+  <p>総視聴数 : <%= @follower %></p>
+<%end%>

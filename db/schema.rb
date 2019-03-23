@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_03_18_064314) do
     t.integer "cutback"
     t.string "site"
     t.text "description"
+    t.integer "flag", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,6 +33,7 @@ ActiveRecord::Schema.define(version: 2019_03_18_064314) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "active_site"
+    t.text "active_url"
     t.string "channel_name"
     t.string "stage_name"
     t.datetime "created_at", null: false
