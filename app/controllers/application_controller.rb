@@ -4,13 +4,14 @@ class ApplicationController < ActionController::Base
 
   def set_search
     @q = Project.ransack(params[:q])
+    @projects = @q.result
   end
 
 
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:active_site, :channel_name, :stage_name, :active_url])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:active_site, :channel_name, :stage_name, :active_url, :channel_follower])
     devise_parameter_sanitizer.permit(:account_update, keys: [:active_site, :channel_name, :stage_name, :active_url])
   end
 end

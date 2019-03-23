@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 2019_03_23_015342) do
     t.integer "cutback"
     t.string "site"
     t.text "description"
-    t.integer "flag", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_03_23_015342) do
     t.text "active_url"
     t.string "channel_name"
     t.string "stage_name"
+    t.integer "channel_follower"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

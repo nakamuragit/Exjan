@@ -5,6 +5,9 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    if current_user.channel_follower.nil?
+      redirect_to user_path(current_user)
+    end
   end
 
   private 

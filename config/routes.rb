@@ -4,9 +4,8 @@ Rails.application.routes.draw do
     resources :users
     resources :projects
     resources :orders
-    get "users/info"
+    # post "users/channel"
     root "projects#index"
-    
   end
   get 'homes/login'
   root "homes#home"

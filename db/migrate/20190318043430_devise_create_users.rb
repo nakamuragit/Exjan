@@ -36,7 +36,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.text :active_url
       t.string :channel_name
       t.string :stage_name
-
+      t.integer :channel_follower
       t.timestamps null: false
     end
 

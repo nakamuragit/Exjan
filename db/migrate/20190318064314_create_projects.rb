@@ -9,8 +9,7 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.integer :cutback
       t.string :site
       t.text :description
-      t.integer :flag, default: 0
-
+      
       t.timestamps
     end
   end
