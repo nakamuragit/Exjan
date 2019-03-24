@@ -1,0 +1,32 @@
+<div class ="row">
+  <div class = "col-6 ml-5">
+    <h1>its showpage</h1>
+    <p><%= @project.company_name%></p>
+    <p><%= @project.pay %></p>
+    <p><%= @project.period %></p>
+    <p><%= @project.method%></p>
+    <p><%= @project.cutback %></p>
+    <p><%= @project.site %></p>
+    <p><%= @project.description%></p>
+    <% if Order.find_by(user_id: current_user.id, project_id: @project.id)%>
+      <div>
+        <%= link_to "あなたはこの案件に応募しています", "#"%>
+      </div>
+    <% else %>
+      <% if @project.cutback < current_user.channel_follower %>
+        <div>
+          <%= link_to "この案件を受ける", orders_path(@project), method: :post %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class = "col-5 ml-4">
+  <p>募集者一覧</p>
+  <% @project.users.each do |person|%>
+    <p>-----------------------</p>
+    <p>名前 : <%= person.stage_name %></p>
+    <p>チャンネル名 : <%= person.channel_name %></p>
+  <% end %>
+  <p>------------------------</p>
+  </div>
+</div>

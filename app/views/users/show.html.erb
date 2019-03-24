@@ -1,0 +1,25 @@
+<div class = "row">
+<div class = "col-9">
+<h1>Users#show</h1>
+<p>名前 : <%= @user.stage_name %></p>
+<p>メールアドレス : <%= @user.email %></p>
+<p>チャンネル名 : <%= @user.channel_name%></p>
+<p>活動サイト : <%= @user.active_site%></p>
+<% if @user.active_site == "youtube" %>
+  <p>チャンネル登録者数 : <%= @channel_member %></p>
+<% else @user.active_site == "Twitch" %>
+  <p>フォロワー数 : <%= @channel_member %></p>
+  <p>総視聴数 : <%= @follower %></p>
+<%end%>
+</div>
+<div class = "col-3">
+  <p>応募一覧</p>
+  <% @user.projects.each do |project|%>
+    <p>-----------------------</p>
+    <p>名前 : <%= project.company_name %></p>
+    <p>金額 : <%= project.pay %></p>
+  <% end %>
+  <p>------------------------</p>
+  </div>
+</div>
+</div>

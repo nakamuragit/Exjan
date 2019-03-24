@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body class = "background">
+  <div class = "row">
+    <% @projects.each do |project| %> 
+      <div class = "card-deck mx-auto">
+        <div class = "card  bg-light col-12 mt-4">
+          <%= link_to image_tag("sample.jpg", width: '375', alt: "サンプル画像"), project_path(project.id), class: "card-img-top mt-4"%>
+            <p class = "card-body text-left">
+          <%= project.company_name %>
+        </p>
+      </div>
+    </div>
+  <%end%>
+</div><br/>
+<div class = "col-12">
+  <%= paginate @projects%>
+</div>
+<%= link_to "sign-up", new_user_registration_path, class: "mt-4 btn btn-primary ml-4 btn-lg" %>
+<%= link_to "log-out", destroy_user_session_path, method: :delete, class: "mt-4 ml-4 btn btn-primary btn-lg" %>
+<%= link_to "show", current_user, class: "mt-4 ml-4 btn btn-primary btn-lg" %>
+<p></p>
+  
+</body>
+</html>
+
+
