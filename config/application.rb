@@ -16,10 +16,10 @@ module Exjan
     # ロガーの設定
     ActiveRecord::Base.logger = Logger.new(STDOUT)
     # DB情報
-    ActiveRecord::Base.establish_connection(
-      "adapter" => "sqlite3",
-      "database" => "./myapp.db"
-    )
+    # ActiveRecord::Base.establish_connection(
+    #   "adapter" => "sqlite3",
+    #   "database" => "./myapp.db"
+    # )
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
