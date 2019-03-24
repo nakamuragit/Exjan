@@ -1,10 +1,5 @@
 class UsersController < ApplicationController
   include Common
-
-  def channel
-    redirect_to user_path
-  end
-
   def show
     @user = User.find_by(id: params[:id]) #追記
     if @user.active_site == "youtube"

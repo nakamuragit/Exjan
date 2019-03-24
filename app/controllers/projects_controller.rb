@@ -1,7 +1,14 @@
 class ProjectsController < ApplicationController
+  before_action :set_search, only: [:index, :search]
+
   def index
-    @projects = Project.page(params[:page]).per(6)
+    # @projects = Project.page(params[:page]).per(6)
   end
+
+  def search
+  end
+
+  
 
   def show
     @project = Project.find(params[:id])
@@ -16,5 +23,8 @@ class ProjectsController < ApplicationController
     params.require(:project).permit(:flag)
   end
 
-  
+  def set_search
+    @q = Project.ransack(params[:q])
+    @projects = @q.result.page(params[:page]).per(6)
+  end
 end

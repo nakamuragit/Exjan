@@ -1,11 +1,5 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :set_search
-
-  def set_search
-    @q = Project.ransack(params[:q])
-    @projects = @q.result
-  end
 
 
   protected

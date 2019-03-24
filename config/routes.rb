@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   authenticated :user do
     resources :users
+    get '/projects/search', to: 'projects#search'
     resources :projects
     resources :orders
-    # post "users/channel"
     root "projects#index"
   end
   get 'homes/login'
