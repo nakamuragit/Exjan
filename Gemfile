@@ -39,6 +39,8 @@ gem "devise"
 gem "ransack"
 gem "kaminari"
 gem 'byebug'
+gem "cancancan"
+gem "rails_admin"
 
 
 group :development, :test do
