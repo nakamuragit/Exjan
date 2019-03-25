@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   authenticated :user do
     resources :users
@@ -7,7 +8,6 @@ Rails.application.routes.draw do
     resources :orders
     root "projects#index"
   end
-  get 'homes/login'
+  get "/homes/forcom", to: "homes#forcom"
   root "homes#home"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

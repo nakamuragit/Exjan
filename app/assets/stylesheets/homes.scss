@@ -1,12 +1,75 @@
 // Place all the styles related to the Homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.test{
+.backimg1{
+  position: relative;
   background-color:#000000;
+  width:100%;
+  height:740px;
   background-image: url("green-orange-and-yellow-ink.jpg");
   background-size: cover;
 }
-.styling_font{
-  background-color:rgba(255,255,255,.3);
+.backimg2{
+  background-color:rgba(243, 240, 224, 0.5);
+}
+.img-small{
+  zoom:0.45;
+}
+.backcolor{
+  background-color:rgba(255,255,255,.1);
+}
+.arrange{
+  padding:50px 0px 0px 50px;
+}
+.arrange2{
+  padding:10px 0px 0px 70px;
+}
+.arrange3{
+  padding:10px 0px 0px 265px;
+}
+.arrange4{
+  padding:10px 0px 0px 327px;
+}
+.arrange5{
+  position:absolute;
+  left:410px;
+  top:1220px
+}
+.arrange6{
+  position:absolute;
+  left:853px;
+  top:1220px
+}
+.font-img{
+  font-family: "TsukuARdGothic-Regular";
+}
+.float-right{
+  color:rgb(51, 56, 51);
+  position:absolute;
+  left:1200px;
+  padding:280px 0px 0px 0px;
+  font-family: "Impact" 
+}
+.mame{
+  color:rgb(51, 56, 51);
+  position:absolute;
+  left:1290px;
+  z-index:1;
+  padding:240px 0px 0px 0px;
+  font-family: "Bodoni Ornaments" 
+}
+body{
+    font-family: 'ヒラギノ角ゴシック', 'メイリオ' ; 
+}
 
+.font-arrange{
+  color:rgb(51, 56, 51);
+  text-shadow: 2px 2px 3px silver;
+  font-weight: bold;
+  font-family: "Meiryo";
+}
+
+.page-end{
+  margin: 0px 0px 100px 0px;
+  border-width:1.5px;
 }
