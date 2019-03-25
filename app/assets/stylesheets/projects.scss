@@ -4,3 +4,22 @@
 .background{
   background-image: url("backgrounds_001.jpg")
 }
+.back-img{
+  padding:0px;
+  background-image: url("5.jpg");
+  background-size:cover;
+}
+.bkRGBA{
+  /* 背景画像の透過用css */
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+}
+
+.arrange-1{
+  height:25%;
+}
+
+.arrange-3{
+  margin:0 auto;
+  width:1000px;
+}
