@@ -5,12 +5,21 @@
   position: relative;
   background-color:#000000;
   width:100%;
-  height:740px;
+  height:730px;
   background-image: url("green-orange-and-yellow-ink.jpg");
   background-size: cover;
 }
 .backimg2{
   background-color:rgba(243, 240, 224, 0.5);
+}
+.backimg3{
+  width:100%;
+  height:735px;
+  background-image: url("backimg.jpg");
+  background-size: cover;
+}
+.backimg4{
+  background-color:rgba(243, 240, 224, 0.9);
 }
 .img-small{
   zoom:0.45;
@@ -33,12 +42,15 @@
 .arrange5{
   position:absolute;
   left:410px;
-  top:1220px
+  top:1240px
 }
 .arrange6{
   position:absolute;
   left:853px;
-  top:1220px
+  top:1240px
+}
+.arrange7{
+  padding:180px 0px 0px 0px;
 }
 .font-img{
   font-family: "TsukuARdGothic-Regular";
@@ -47,7 +59,7 @@
   color:rgb(51, 56, 51);
   position:absolute;
   left:1200px;
-  padding:280px 0px 0px 0px;
+  padding:220px 0px 0px 0px;
   font-family: "Impact" 
 }
 .mame{
@@ -55,7 +67,7 @@
   position:absolute;
   left:1290px;
   z-index:1;
-  padding:240px 0px 0px 0px;
+  padding:180px 0px 0px 0px;
   font-family: "Bodoni Ornaments" 
 }
 body{
@@ -68,8 +80,25 @@ body{
   font-weight: bold;
   font-family: "Meiryo";
 }
-
+.font1{
+  color:rgb(51, 56, 51);
+  text-shadow: 2px 2px 3px silver;
+  font-family: "Meiryo";  
+}
 .page-end{
   margin: 0px 0px 100px 0px;
   border-width:1.5px;
+}
+
+.font-space{
+  letter-spacing: 0em
+}
+
+.font-space2{
+  letter-spacing: -0.15em
+}
+
+.bg-mask {
+  height: 100%;
+  background: rgba(233, 221, 169, 0.5);
 }

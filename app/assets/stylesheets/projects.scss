@@ -5,16 +5,22 @@
   background-image: url("backgrounds_001.jpg")
 }
 .back-img{
-  padding:0px;
-  background-image: url("5.jpg");
+  width:100%;
+  height:780px;
+  background-image: url("backimg.jpg");
   background-size:cover;
 }
-.bkRGBA{
-  /* 背景画像の透過用css */
-  height: 100%;
-  background: rgba(255,255,255,0.5);
+.back-img2{
+  width:100%;
+  background: rgba(233, 221, 169, 0.5);
 }
-
+.bkRGBA{
+  height: 100%;
+  background: rgba(233, 221, 169, 0.3);
+}
+.arrange{
+  padding: 100px 0px 0px 0px;
+}
 .arrange-1{
   height:25%;
 }
