@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_search, only: [:index, :search]
+  before_action :set_search, only: [:index, :search, :search_pay, :search_period, :search_method, :search_cutback, :search_site]
 
   def index
     # @projects = Project.page(params[:page]).per(6)
@@ -8,7 +8,18 @@ class ProjectsController < ApplicationController
   def search
   end
 
-  
+  def search_pay
+  end
+
+  def search_period
+  end
+
+  def search_method
+  end
+
+
+  def search_site
+  end
 
   def show
     @project = Project.find(params[:id])
