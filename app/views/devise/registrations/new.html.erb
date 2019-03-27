@@ -1,5 +1,7 @@
-<div class = "col-md-6 offset-md-3 mt-3">
-<h2>ライブ配信者用 登録フォーム</h2>
+<div class = "backimg-registrations-devise-new-1">
+<div class = "backimg-registrations-mask-devise-new-1">
+<div class = "col-md-6 offset-md-3 pt-3">
+<h2 class = "pt-5">ライブ配信者用 登録フォーム</h2>
 <br />
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -66,4 +68,6 @@
     <%= f.submit "Sign up", class: "btn border border-muted" %>
   </div>
 <% end %>
+</div>
+</div>
 </div>

@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .background{
-  background-image: url("backgrounds_001.jpg")
+  width:100%;
+  height:1050px;
+  background-image: url("71-4700-6300.jpg")
 }
 .back-img{
   width:100%;
@@ -13,6 +15,11 @@
 .back-img2{
   width:100%;
   background: rgba(233, 221, 169, 0.5);
+}
+.back-img3{
+  width:100%;
+  height:1050px;
+  background: rgba(233, 221, 169, 0.4);
 }
 .bkRGBA{
   height: 100%;
@@ -28,4 +35,25 @@
 .arrange-3{
   margin:0 auto;
   width:1000px;
+}
+
+.padding-1{
+  padding:0px 0px 0px 47px;
+}
+
+.padding-2{
+  padding:0px 0px 0px 10px;
+}
+
+.padding-3{
+  margin:0px 21px 0px 44px;
+}
+
+.float{
+  float:right;
+}
+
+.parent {
+    display: flex;
+    justify-content: space-between;
 }
