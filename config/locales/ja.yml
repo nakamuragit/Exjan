@@ -1,4 +1,16 @@
 ja:
+  activerecord:
+    attributes:
+      user:
+        name: 名前
+        password: パスワード
+        password_confirmation: パスワード確認
+        email: メールアドレス
+        active_site: 活動サイト
+        active_url: チャンネルURL
+        channel_name: チャンネル名
+        stage_name: 活動名
+        current_password: 変更したいパスワード
   admin:
     home:
       name: "ホーム"
