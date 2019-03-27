@@ -16,7 +16,7 @@
   <div class="field form-group">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+      (最低<%= @minimum_password_length %>文字)
     <% end %><br />
     <div class="col-12">
     <%= f.password_field :password, autocomplete: "new-password", class: "form-control"%>
@@ -31,7 +31,7 @@
   </div>
 
   <div class="field form-group">
-    <%= f.label :active_site%>
+    <%= f.label :active_site %>
     <div class="col-12 btn-group-toggle row mx-auto" data-toggle="buttons">
     <label class="btn btn-outline-danger" style="width:50%">
       <%= f.radio_button :active_site, "youtube" %>YouTube

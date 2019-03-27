@@ -46,17 +46,19 @@
         </div>
       </div>
     </div>
-    <div class = "col-10 ml-3 mt-5">
-      <% if Order.find_by(user_id: current_user.id, project_id: @project.id)%>
-        <%= link_to "あなたはこの案件に応募しています", project_path(@project), class: "btn btn-danger"%>
-      <% else %>
-        <% if @project.cutback < current_user.channel_follower %>
-          <div>
-            <%= link_to "この案件を受ける", orders_path(@project), method: :post, class: "btn btn-success btn-lg mb-5" %>
-          </div>
+    <% if current_user.active_site == @project.site%>
+      <div class = "col-10 ml-3 mt-5">
+        <% if Order.find_by(user_id: current_user.id, project_id: @project.id)%>
+          <%= link_to "あなたはこの案件に応募しています", project_path(@project), class: "btn btn-danger"%>
+        <% else %>
+          <% if @project.cutback < current_user.channel_follower %>
+            <div>
+              <%= link_to "この案件を受ける", orders_path(@project), method: :post, class: "btn btn-success btn-lg mb-5" %>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
   <div class = "col-4">
     <h1 class = "pt-5 pb-3">応募者一覧</h1>
