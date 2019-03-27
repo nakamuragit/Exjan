@@ -3,11 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  #これ下の一文消していいかわからん
-  has_one_attached :avatar
   #ここからは必要なやつ
   has_many :orders
   has_many :projects, through: :orders
-
-  
+  validates :active_site, presence: true
+  validates :active_url, presence: true
+  validates :channel_name, presence: true
+  validates :stage_name, presence: true
 end

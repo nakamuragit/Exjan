@@ -11,8 +11,11 @@ class HomesController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    @contact.save
-    redirect_to homes_sign_up_path
+    if @contact.save
+      redirect_to homes_sign_up_path
+    else 
+      render homes_forcom_path
+    end
   end
 
   private

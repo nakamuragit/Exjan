@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     if @user.active_site == "youtube"
       @channel_member = calc_youtube(@user.active_url)
       User.update(params[:id], channel_follower: @channel_member)
-    else
+    elsif @user.active_site == "Twitch"
       @channel_member = calc_Twitch(@user.active_url)
       User.update(params[:id], channel_follower: @channel_member)
     end
