@@ -1,65 +1,65 @@
 <div class = "backimg-users-show-1">
-<div class = "backimg-users-mask-2">
-<div class = "row">
-  <div class = "col-8 pl-5">
-    <h1 class = "pt-5 pb-5 pl-5"><%= @user.stage_name%>様の情報一覧</h1>
-    <div class = "row pl-5">
-      <div class = "card col-3 text-center pt-3">
-        <img class = "img-scale mx-auto" src= "/assets/person_profile.png" alt="名前">
-        <p class = "mb-0 mt-1 font-bold">"<%= @user.stage_name %>"</p>
-        <p>名前</p>
+  <div class = "backimg-users-mask-2">
+    <div class = "row">
+      <div class = "col-8 pl-5">
+        <h1 class = "pt-5 pb-5 pl-5"><%= @user.stage_name%>様の情報一覧</h1>
+        <div class = "row pl-5">
+          <div class = "card col-3 text-center pt-3">
+            <img class = "img-scale mx-auto" src= "/assets/person_profile.png" alt="名前">
+            <p class = "mb-0 mt-1 font-bold">"<%= @user.stage_name %>"</p>
+            <p>名前</p>
+          </div>
+          <div class = "card col-3 text-center ml-5 pt-3">
+            <img class = "img-scale mx-auto" src= "/assets/mail-profile.png" alt="名前">
+            <p class = "mb-0 mt-1 font-bold">"<%= @user.email %>"</p>
+            <p>メールアドレス</p>
+          </div>
+          <div class = "card col-3 text-center ml-5 pt-3">
+            <img class = "img-scale mx-auto" src= "/assets/channel_profile.png" alt="名前">
+            <p class = "mb-0 mt-1 font-bold">"<%= @user.channel_name %>"</p>
+            <p>チャンネル名</p>
+          </div>
+        </div>
+        <div class = "row arrange-user ml-5">
+          <% if @user.active_site == "youtube" %>
+          <div class = "card col-4 text-center pt-4 mt-5">
+            <img class = "img-scale mx-auto" src= "/assets/youtube.png" alt="名前">
+            <p class = "mb-0 mt-3 font-bold">"<%= @user.active_site %>"</p>
+            <p>活動サイト</p>
+          </div>
+          <div class = "card col-4 text-center  pt-3 mt-5 ml-5">
+            <img class = "img-scale mx-auto" src= "/assets/follower.png" alt="名前">
+            <p class = "mb-0 mt-2 font-bold">"<%= @channel_member %>人"</p>
+            <p>チャンネル登録者数</p>
+          </div>
+          <% else @user.active_site == "Twitch" %>
+            <div class = "card col-4 text-center pt-4 mt-5">
+              <img class = "img-scale-2 mx-auto" src= "/assets/twitch1.png" alt="名前">
+              <p class = "mb-0 mt-3 font-bold">"<%= @user.active_site %>"</p>
+              <p>活動サイト</p>
+            </div>
+            <div class = "card col-4 text-center  pt-3 mt-5 ml-5">
+              <img class = "img-scale mx-auto" src= "/assets/heart.png" alt="名前">
+              <p class = "mb-0 mt-2 font-bold">"<%= @channel_member %>人"</p>
+              <p>フォロワー数</p>
+            </div>
+          <%end%>
+        </div>
       </div>
-      <div class = "card col-3 text-center ml-5 pt-3">
-        <img class = "img-scale mx-auto" src= "/assets/mail-profile.png" alt="名前">
-        <p class = "mb-0 mt-1 font-bold">"<%= @user.email %>"</p>
-        <p>メールアドレス</p>
-      </div>
-      <div class = "card col-3 text-center ml-5 pt-3">
-        <img class = "img-scale mx-auto" src= "/assets/channel_profile.png" alt="名前">
-        <p class = "mb-0 mt-1 font-bold">"<%= @user.channel_name %>"</p>
-        <p>チャンネル名</p>
+      <div class = "col-3">
+        <h1 class = "pt-5 pb-3">応募済み案件</h1>
+        <% @user.projects.each do |project|%>
+          <hr class = "backimg-show">
+          <div class = "parent mt-2 ml-2 mr-2">
+            <span class = "text-left">名前 : <%= project.company_name %></span>
+            <span class = "text-right">報酬 : ¥<%= project.pay %></span>
+          </div>
+          <div class = "parent pt-2 ml-2 mr-2">
+            <span class = "text-left mt-1">期間 : <%= project.period %></span>
+            <%= link_to "詳細はこちら", project_path(project.id), class: "btn btn-secondary btn-sm"%>
+          </div>
+        <% end %>
       </div>
     </div>
-    <div class = "row arrange-user ml-5">
-      <% if @user.active_site == "youtube" %>
-      <div class = "card col-4 text-center pt-4 mt-5">
-        <img class = "img-scale mx-auto" src= "/assets/youtube.png" alt="名前">
-        <p class = "mb-0 mt-3 font-bold">"<%= @user.active_site %>"</p>
-        <p>活動サイト</p>
-      </div>
-      <div class = "card col-4 text-center  pt-3 mt-5 ml-5">
-        <img class = "img-scale mx-auto" src= "/assets/follower.png" alt="名前">
-        <p class = "mb-0 mt-2 font-bold">"<%= @channel_member %>人"</p>
-        <p>チャンネル登録者数</p>
-      </div>
-      <% else @user.active_site == "Twitch" %>
-        <div class = "card col-4 text-center pt-4 mt-5">
-          <img class = "img-scale-2 mx-auto" src= "/assets/twitch1.png" alt="名前">
-          <p class = "mb-0 mt-3 font-bold">"<%= @user.active_site %>"</p>
-          <p>活動サイト</p>
-        </div>
-        <div class = "card col-4 text-center  pt-3 mt-5 ml-5">
-          <img class = "img-scale mx-auto" src= "/assets/heart.png" alt="名前">
-          <p class = "mb-0 mt-2 font-bold">"<%= @channel_member %>人"</p>
-          <p>フォロワー数</p>
-        </div>
-      <%end%>
-    </div>
   </div>
-  <div class = "col-3">
-    <h1 class = "pt-5 pb-3">応募済み案件</h1>
-    <% @user.projects.each do |project|%>
-      <hr class = "backimg-show">
-      <div class = "parent mt-2 ml-2 mr-2">
-        <span class = "text-left">名前 : <%= project.company_name %></span>
-        <span class = "text-right">報酬 : ¥<%= project.pay %></span>
-      </div>
-      <div class = "parent pt-2 ml-2 mr-2">
-        <span class = "text-left mt-1">期間 : <%= project.period %></span>
-        <%= link_to "詳細はこちら", project_path(project.id), class: "btn btn-secondary btn-sm"%>
-      </div>
-    <% end %>
-  </div>
-</div>
-</div>
 </div>

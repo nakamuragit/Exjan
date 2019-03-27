@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 2019_03_25_011234) do
 
   create_table "contacts", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "business"
-    t.text "reason"
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "business", null: false
+    t.text "reason", null: false
     t.text "other"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -33,14 +33,14 @@ ActiveRecord::Schema.define(version: 2019_03_25_011234) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string "image_data"
-    t.string "company_name"
-    t.integer "pay"
-    t.string "period"
-    t.string "method"
-    t.integer "cutback"
-    t.string "site"
-    t.text "description"
+    t.string "image_data", null: false
+    t.string "company_name", null: false
+    t.integer "pay", null: false
+    t.string "period", null: false
+    t.string "method", null: false
+    t.integer "cutback", null: false
+    t.string "site", null: false
+    t.text "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

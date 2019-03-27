@@ -11,6 +11,11 @@ ja:
         channel_name: チャンネル名
         stage_name: 活動名
         current_password: 変更したいパスワード
+      contact:
+        name: 会社名
+        email: メールアドレス
+        business: 主な事業内容
+        reason: 登録理由
   admin:
     home:
       name: "ホーム"

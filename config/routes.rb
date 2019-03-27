@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   post "/homes/create", to: "homes#create"
   authenticated :user do
-    resources :users
+    resources :users 
     get '/projects/search', to: 'projects#search'
     get '/projects/search/pay', to: 'projects#search_pay'
     get '/projects/search/period', to: 'projects#search_period'
