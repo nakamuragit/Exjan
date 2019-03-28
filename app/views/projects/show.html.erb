@@ -1,77 +1,81 @@
-<div class ="row">
-  <div class = "col-7 ml-5">
-    <div class = "pl-5">
-      <h1 class = "pt-5 ml-5 pb-4">案件情報一覧</h1>
-      <div class = "row">
-        <div class = "card col-3 text-center pt-3">
-          <img class = "img-scale mx-auto" src= "/assets/company.png" alt="名前">
-          <p class = "mb-0 mt-1 font-bold">"<%= @project.company_name %>"</p>
-          <p>会社名</p>
-        </div>
-        <div class = "card col-3 text-center ml-5 pt-3">
-          <img class = "img-scale mx-auto" src= "/assets/money.png" alt="名前">
-          <p class = "mb-0 mt-1 font-bold">"¥<%= @project.pay %>"</p>
-          <p>報酬金</p>
-        </div>
-        <div class = "card col-3 text-center ml-5 pt-3">
-          <img class = "img-scale mx-auto" src= "/assets/time.png" alt="名前">
-          <p class = "mb-0 mt-1 font-bold">"<%= @project.period %>"</p>
-          <p>期間</p>
-        </div>
-      </div>
-      <div class = "row mt-5">
-        <div class = "card col-3 text-center pt-3">
-          <img class = "img-scale mx-auto" src= "/assets/AD1.png" alt="名前">
-          <p class = "mb-0 mt-1 font-bold">"<%= @project.method%>"</p>
-          <p>広告方法</p>
-        </div>
-        <div class = "card col-3 text-center ml-5 pt-3">
-          <img class = "img-scale mx-auto" src= "/assets/follower.png" alt="名前">
-          <p class = "mb-0 mt-1 font-bold">"<%= @project.cutback %>人"</p>
-          <p>必要知名度</p>
-        </div>
-        <div class = "card col-3 text-center ml-5 pt-3">
-          <img class = "img-scale mx-auto" src= "/assets/WEB-small.png" alt="名前">
-          <p class = "mb-0 mt-1 font-bold">"<%= @project.site %>"</p>
-          <p>対象サイト</p>
-        </div>
-      </div>
-      <div class = "card col-10 mt-5 ml-2 ">
-      <div class = "row">
-          <img class = "img-scale ml-5 pt-4 mb-4" src= "/assets/pen.png" alt="名前">
-         <div class = "card-body">
-          <p class = "text-center mr-5 pr-5">その他</p>
-          <p class = "mb-0 mt-1 font-bold text-center mr-5 pr-5">"<%= @project.description %>"</p>
-         </div>
-        </div>
-      </div>
-    </div>
-    <% if current_user.active_site == @project.site%>
-      <div class = "col-10 ml-3 mt-5">
-        <% if Order.find_by(user_id: current_user.id, project_id: @project.id)%>
-          <%= link_to "あなたはこの案件に応募しています", project_path(@project), class: "btn btn-danger"%>
-        <% else %>
-          <% if @project.cutback < current_user.channel_follower %>
-            <div>
-              <%= link_to "この案件を受ける", orders_path(@project), method: :post, class: "btn btn-success btn-lg mb-5" %>
+<div class = "backimg-project-show-1">
+  <div class = "container-fluid">
+    <div class ="row">
+      <div class = "col-7 ml-5">
+        <div class = "pl-5">
+          <h1 class = "pt-5 ml-5 pb-4 font-img-bold">案件情報一覧</h1>
+          <div class = "row">
+            <div class = "card col-3 text-center pt-3">
+              <img class = "img-scale mx-auto" src= "/assets/company.png" alt="名前">
+              <p class = "mb-0 mt-1 font-bold">"<%= @project.company_name %>"</p>
+              <p>会社名</p>
             </div>
-          <% end %>
+            <div class = "card col-3 text-center ml-5 pt-3">
+              <img class = "img-scale mx-auto" src= "/assets/money.png" alt="名前">
+              <p class = "mb-0 mt-1 font-bold">"¥<%= @project.pay %>"</p>
+              <p>報酬金</p>
+            </div>
+            <div class = "card col-3 text-center ml-5 pt-3">
+              <img class = "img-scale mx-auto" src= "/assets/time.png" alt="名前">
+              <p class = "mb-0 mt-1 font-bold">"<%= @project.period %>"</p>
+              <p>期間</p>
+            </div>
+          </div>
+          <div class = "row mt-5">
+            <div class = "card col-3 text-center pt-3">
+              <img class = "img-scale mx-auto" src= "/assets/AD1.png" alt="名前">
+              <p class = "mb-0 mt-1 font-bold">"<%= @project.method%>"</p>
+              <p>広告方法</p>
+            </div>
+            <div class = "card col-3 text-center ml-5 pt-3">
+              <img class = "img-scale mx-auto" src= "/assets/follower.png" alt="名前">
+              <p class = "mb-0 mt-1 font-bold">"<%= @project.cutback %>人"</p>
+              <p>必要知名度</p>
+            </div>
+            <div class = "card col-3 text-center ml-5 pt-3">
+              <img class = "img-scale mx-auto" src= "/assets/WEB-small.png" alt="名前">
+              <p class = "mb-0 mt-1 font-bold">"<%= @project.site %>"</p>
+              <p>対象サイト</p>
+            </div>
+          </div>
+          <div class = "card col-10 mt-5 ml-2 ">
+          <div class = "row">
+              <img class = "img-scale ml-5 pt-4 mb-4" src= "/assets/pen.png" alt="名前">
+            <div class = "card-body">
+              <p class = "text-center mr-5 pr-5">その他</p>
+              <p class = "mb-0 mt-1 font-bold text-center mr-5 pr-5">"<%= @project.description %>"</p>
+            </div>
+            </div>
+          </div>
+        </div>
+        <% if current_user.active_site == @project.site%>
+          <div class = "col-10 ml-3 mt-5">
+            <% if Order.find_by(user_id: current_user.id, project_id: @project.id)%>
+              <%= link_to "あなたはこの案件に応募しています", project_path(@project), class: "btn btn-danger"%>
+            <% else %>
+              <% if @project.cutback < current_user.channel_follower %>
+                <div>
+                  <%= link_to "この案件を受ける", orders_path(@project), method: :post, class: "btn btn-success btn-lg mb-5" %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
         <% end %>
       </div>
-    <% end %>
-  </div>
-  <div class = "col-4">
-    <h1 class = "pt-5 pb-3">応募者一覧</h1>
-    <% @project.users.each do |person|%>
-      <hr class = "backimg-show">
-      <div class = "parent mt-2 ml-2 mr-2">
-        <span class = "text-left">名前 : <%= person.stage_name %></span>
-        <span class = "text-right">チャンネル名 :<%= person.channel_name %></span>
+      <div class = "col-4 font-img">
+        <h1 class = "pt-5 pb-3 font-img-bold">応募者一覧</h1>
+        <% @project.users.each do |person|%>
+          <hr class = "backimg-show">
+          <div class = "parent mt-2 ml-2 mr-2">
+            <span class = "text-left">名前 : <%= person.stage_name %></span>
+            <span class = "text-right">チャンネル名 :<%= person.channel_name %></span>
+          </div>
+          <div class = "parent pt-3 ml-2 mr-2">
+            <span class = "text-left mt-1">チャンネル登録者数 : <%= person.channel_follower %></span>
+            <%= link_to "詳細はこちら", user_path(person.id), class: "btn btn-secondary btn-sm"%>
+          </div>
+        <% end %>
       </div>
-      <div class = "parent pt-3 ml-2 mr-2">
-        <span class = "text-left mt-1">チャンネル登録者数 : <%= person.channel_follower %></span>
-        <%= link_to "詳細はこちら", user_path(person.id), class: "btn btn-secondary btn-sm"%>
-      </div>
-    <% end %>
+    </div>
   </div>
 </div>

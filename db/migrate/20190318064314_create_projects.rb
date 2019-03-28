@@ -1,7 +1,7 @@
 class CreateProjects < ActiveRecord::Migration[5.2]
   def change
     create_table :projects do |t|
-      t.string :image_dataco
+      t.string :image_data
       t.string :company_name, null: false
       t.integer :pay, null: false
       t.string :period, null: false

@@ -20,13 +20,13 @@
 
 .backimg-user1{
   width:100%;
-  height:750px;
+  height:100%;
   background-image: url("57-4700-6300.jpg");
 }
 
 .backimg-user-mask{
   background-color:rgba(255, 255, 255, 0.5);
-  height:750px;
+  height:100%;
 }
 
 .backimg-users-show-1{
@@ -38,12 +38,12 @@
 
 .backimg-users-mask-2{
   background: rgba(233, 221, 169, 0.2);
-  height:750px;
+  height:100%;
 }
 
 .backimg-registrations-mask-devise-new-1{
   background: rgba(217, 219, 233, 0.2);
-  height:820px;
+  height:100%;
 }
 
 .backimg-devise-new-1{
@@ -54,7 +54,18 @@
 }
 .backimg-registrations-devise-new-1{
   width:100%;
-  height:820px;
+  height:100%;
   background-image: url("68-4700-6300.jpg");
   background-size:cover;
+}
+
+.font-img-bold{
+  font-family: "Toppan Bunkyu Gothic";
+  font-weight: 500;
+}
+
+
+.form-title-new{
+  color:rgb(51, 56, 51);
+  font-family: "ToppanBunkyuMidashiGothicStdN-ExtraBold" 
 }

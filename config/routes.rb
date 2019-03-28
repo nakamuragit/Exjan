@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get '/projects/search/period', to: 'projects#search_period'
     get '/projects/search/method', to: 'projects#search_method'
     get '/projects/search/site', to: 'projects#search_site'
+    get "/projects/how_to_use", to: "projects#how_to_use"
     resources :projects
     resources :orders
     root "projects#index"
