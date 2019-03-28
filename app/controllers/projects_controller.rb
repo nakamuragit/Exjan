@@ -28,6 +28,9 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def how_to_use
+  end
+
   private 
   
   def project_params

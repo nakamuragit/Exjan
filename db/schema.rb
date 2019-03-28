@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_03_25_011234) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string "image_data", null: false
+    t.string "image_data"
     t.string "company_name", null: false
     t.integer "pay", null: false
     t.string "period", null: false

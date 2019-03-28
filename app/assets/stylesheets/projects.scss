@@ -3,12 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .background{
   width:100%;
-  height:1050px;
-  background-image: url("71-4700-6300.jpg")
+  height:100%;
+  background-image: url("71-4700-6300.jpg");
 }
 .back-img{
   width:100%;
-  height:780px;
+  height:750px;
   background-image: url("backimg.jpg");
   background-size:cover;
 }
@@ -18,7 +18,7 @@
 }
 .back-img3{
   width:100%;
-  height:1050px;
+  height:100%;
   background: rgba(233, 221, 169, 0.4);
 }
 .bkRGBA{
@@ -56,4 +56,57 @@
 .parent {
     display: flex;
     justify-content: space-between;
+}
+
+
+.backimg-project-show-1{
+  background: rgba(233, 221, 169, 0.2);
+  height:800px;
+}
+
+.arrange-test{
+  padding: 0px 0px 0px 770px;
+}
+
+.scale-how_to_use{
+  zoom:0.4;
+}
+
+.position-how_to_use-2{
+  zoom:0.4;
+  position: relative;
+  right:200px;
+  bottom:360px;
+}
+
+
+.position-how_to_use-3{
+  position: relative;
+  right: 700px;
+  top: 460px;
+}
+
+.position-how_to_use-4{
+  position: relative;
+  top:70px;
+  right:80px;
+}
+
+.position-how_to_use-5{
+  position: relative;
+  top:50px;
+  left:120px;
+}
+
+.background-how_to_use{
+  width:100%;
+  height:750px;
+  background-image: url("57.jpg");
+  background-size:cover;
+}
+
+.mask-how_to_use{
+  width:100%;
+  height:100%;
+  background: rgba(114, 113, 107, 0.1);
 }
